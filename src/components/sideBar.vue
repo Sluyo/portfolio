@@ -5,6 +5,7 @@
     <button @click="closeNav" class="closeNav">☰</button>
     <div class="links">
       <router-link to="/">Home</router-link>
+      <router-link to="/shop">Shop</router-link>
       <a href="/#featured">Featured</a>
       <a href="/#cocktails">Cocktails</a>
       <a href="/#originals">Originals</a>

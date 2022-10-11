@@ -18,45 +18,16 @@
     </button>
   </div>
   <div class="filter">
-    <button @click="changeCockFilter">Cocktails</button>
-    <button>Mocktails</button>
-    <button>Originals</button>
+    <RouterLink to="" class="filterLink">All</RouterLink>
+    <RouterLink to="" class="filterLink">Cocktails</RouterLink>
+    <RouterLink to="" class="filterLink">Mocktails</RouterLink>
+    <RouterLink to="" class="filterLink">Originals</RouterLink>
   </div>
 </template>
 
 <script>
   export default {
-    data() {
-      return{
-        cockFilter: 0,
-        mockFilter: 0,
-        originFilter: 0
-      }
-    },
-    methods: {
-      changeCockFilter() {
-        if(cockFilter === 0) {
-          cockFilter = 1;
-          console.log(cockFilter);
-        } else {
-          this.cockFilter = 0;
-        }
-      },
-      changeMockFilter() {
-        if(this.mockFilter === 0) {
-          this.mockFilter = 1;
-        } else {
-          this.mockFilter = 0;
-        }
-      },
-      changeOriginFilter() {
-        if(this.originFilter === 0) {
-          this.originFilter = 1;
-        } else {
-          this.originFilter = 0;
-        }
-      }
-    }
+    
   }
 </script>
 
@@ -123,23 +94,15 @@
     flex-direction: row;
     position: fixed;
     width: 100%;
-    height: 50px;
+    height: 40px;
     z-index: 2;
     margin-top: 70px;
     justify-content: space-around;
-
-    button {
-      border: none;
-      background: none;
+    
+    .filterLink {
+      padding-top: 10px;
       color: white;
-      font-size: x-large;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    .filter:nth-child(1) {
-      border-left: solid 2px white;
-      border-right: solid 2px white;
+      text-decoration: none;
     }
   }
 </style>
